@@ -2,6 +2,22 @@
   "name": "vue-onepipejs-checkout",
   "version": "0.1.0",
   "author": "Samuel O. Alapakristi",
+  "bugs": {
+    "url": "https://github.com/samalapsy/vue-onepipejs-checkout/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vue.js",
+    "vue",
+    "onepipe",
+    "onepipejs",
+    "checkout",
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samalapsy/vue-onepipejs-checkout"
+  },
+  "homepage": "https://github.com/samalapsy/vue-onepipejs-checkout#readme",
   "private": false,
   "main": "./dist/vue-onepipejs-checkout.common.js",
   "files": [

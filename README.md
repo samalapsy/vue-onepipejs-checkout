@@ -1,29 +1,90 @@
 # vue-onepipejs-checkout
+[![npm](https://img.shields.io/npm/v/v-mask.svg)](https://www.npmjs.com/package/v-mask)
+[![Github file size](https://img.shields.io/github/size/probil/v-mask/dist/v-mask.min.js.svg)](https://raw.githubusercontent.com/probil/v-mask/master/dist/v-mask.min.js)
+[![npm](https://img.shields.io/npm/dm/v-mask.svg)](https://www.npmjs.com/package/v-mask)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/probil/v-mask/master/LICENSE)
+[![Vue2](https://img.shields.io/badge/Vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/v-mask/badge?style=rounded)](https://www.jsdelivr.com/package/npm/v-mask)
+[![Tested with TestCafe](https://img.shields.io/badge/tested%20with-TestCafe-2fa4cf.svg)](https://github.com/DevExpress/testcafe)
 
-## Project setup
+OnePipe.io is a OneGateway many service. This package implements the the version 2 of  `collect` , `airtime purchase` , `data purchase` service. Check [OnePipe documentation](https://v1.docs.onepipe.io/?version=latest#intro) for more information
+
+## :heavy_check_mark: Browser Support
+
+|![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) | ![iOS Safari](https://raw.github.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png) | ![Android WebView](https://raw.github.com/alrra/browser-logos/master/src/android-webview-beta/android-webview-beta_48x48.png) | ![Android WebView](https://raw.github.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png)
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 74+ :heavy_check_mark: | 66+ :heavy_check_mark:  | 12+ :heavy_check_mark: | 46+ :heavy_check_mark: | 17+ :heavy_check_mark: | 11+ :heavy_check_mark: | 12+ :heavy_check_mark: | 67+ :heavy_check_mark: | 8.2+ :heavy_check_mark:
+
+We support only browsers with global usage statistics greater then 1%, last 2 version of each browser but not dead browsers. Library may work in older browser but we don't not guarantee that. You may need addition polyfills to make it work. 
+
+
+## Installation
+This version requires Vue 2.X.
 ```
-npm install
+npm i vue-onepipejs-checkout
 ```
 
-### Compiles and hot-reloads for development
+## Initialization
 ```
-npm run serve
+import Vue from 'vue'
+
+// As a plugin
+import Checkout from 'onepipe-checkout'
+Vue.use(Checkout);
+
+// Or as a directive
+import { Checkout } from 'v-mask'
+Vue.directive('onepipe-checkout', Checkout);
+
 ```
 
-### Compiles and minifies for production
+### Usage
 ```
-npm run build
+<onepipe-checkout
+		size="md"
+		:rounded="true"
+		api_key="api-key"
+		:amount="500"
+		request_type="collect"
+		:transaction_ref="'123232'"
+		:transaction_ref_parent="'parent_123232'"
+		transaction_desc="demos payment"
+		:customer="customer"
+		:options="options"
+		:meta="meta"
+		:details="details"
+		:callback="onCallback"
+		:close="onClose"
+	>
+	Checkout
+</onepipe-checkout>
 ```
 
-### Run your tests
-```
-npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## :gear: Configs
+
+List of supported placeholders:
+
+| Value						| Format                       				|
+|---------------------------|-------------------------------------------|
+| amount					| In kobo Eg 50000                 			|
+| api_key					| OnePipe API key                 			|
+| request_type     			| collect, airtime purchase, data purchase	|
+| close() 	    			| function()								|
+| callback() 				| function() 								|
+| transaction_desc			| Eg. Sample payment 						|
+| transaction_ref   		| Unique Eg. TRX-732423 					|
+| transaction_ref_parent   	| TRX-732423								|
+| customer  				| Object									|
+| details				    | Object 									|
+| options				    | Object 									|
+| meta 					    | Object 									|
+| size 					    | md, sm, lg 								|	
+| rounded				    | true, false								|
+
+
+
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For more details about the configs see [OnePipe Documentation](https://documenter.getpostman.com/view/6358444/SVmySJ79?version=latest#847649c9-eb8a-4038-a916-9bd6b306b435).
+
