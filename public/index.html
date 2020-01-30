@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>vue-onepipejs-checkout</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but vue-onepipejs-checkout doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>vue-onepipejs-checkout</title>
+  <!-- <script src="https://js.dev.onepipe.io/v2"></script> -->
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but vue-onepipejs-checkout doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app">
+
+    <onepipe-checkout size="md" :rounded="true" api_key="wtd8ulyjfghMPuEtRE0Q_300c7b5a0b7e4fe7bdf49d901c8779d5" :amount="500" request_type="collect" :transaction_ref="'123232'" :transaction_ref_parent="'parent_123232'" transaction_desc="demos payment"  :customer="customer" :options="options" :meta="meta" :details="details" :callback="onCallback" :close="onClose">
+      Checkout
+    </onepipe-checkout>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
