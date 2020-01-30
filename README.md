@@ -1,10 +1,10 @@
 # vue-onepipejs-checkout
-[![npm](https://img.shields.io/npm/v/v-mask.svg)](https://www.npmjs.com/package/v-mask)
-[![Github file size](https://img.shields.io/github/size/probil/v-mask/dist/v-mask.min.js.svg)](https://raw.githubusercontent.com/probil/v-mask/master/dist/v-mask.min.js)
-[![npm](https://img.shields.io/npm/dm/v-mask.svg)](https://www.npmjs.com/package/v-mask)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/probil/v-mask/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/vue-onepipejs-checkout.svg)](https://www.npmjs.com/package/vue-onepipejs-checkout)
+[![Github file size](https://img.shields.io/github/size/probil/vue-onepipejs-checkout/dist/vue-onepipejs-checkout.min.js.svg)](https://raw.githubusercontent.com/probil/vue-onepipejs-checkout/master/dist/vue-onepipejs-checkout.min.js)
+[![npm](https://img.shields.io/npm/dm/vue-onepipejs-checkout.svg)](https://www.npmjs.com/package/vue-onepipejs-checkout)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/probil/vue-onepipejs-checkout/master/LICENSE)
 [![Vue2](https://img.shields.io/badge/Vue-2.x-brightgreen.svg)](https://vuejs.org/)
-[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/v-mask/badge?style=rounded)](https://www.jsdelivr.com/package/npm/v-mask)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/vue-onepipejs-checkout/badge?style=rounded)](https://www.jsdelivr.com/package/npm/vue-onepipejs-checkout)
 [![Tested with TestCafe](https://img.shields.io/badge/tested%20with-TestCafe-2fa4cf.svg)](https://github.com/DevExpress/testcafe)
 
 OnePipe.io is a OneGateway many service. This package implements the the version 2 of  `collect` , `airtime purchase` , `data purchase` service. Check [OnePipe documentation](https://v1.docs.onepipe.io/?version=latest#intro) for more information
@@ -33,7 +33,7 @@ import Checkout from 'onepipe-checkout'
 Vue.use(Checkout);
 
 // Or as a directive
-import { Checkout } from 'v-mask'
+import { Checkout } from 'vue-onepipejs-checkout'
 Vue.directive('onepipe-checkout', Checkout);
 
 ```
